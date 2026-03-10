@@ -1,10 +1,10 @@
 //Daniel Suarez
 //3/10/2026
 
-//This is a program thatwill process a sequence of integer values in the range of 1 through 10 read from the standard input device
+//This is a program that will process a sequence of integer values in the range of 1 through 10 read from the standard input device
 // it will display the count, minimum, maximum, and average of the entered values.
 #include <iostream>
-#include <iomanip>
+#include <iomanip> //set precision 
 #include <limits>
 
 using namespace std;
@@ -12,13 +12,13 @@ using namespace std;
 int main()
 
 {
-	cout << "welcome" << endl;
+	cout << "welcome, This is a program that will process a sequence of integer values in the range of 1 through 10 and will display the count, minimum, maximum, and average of the entered values" << endl;
 	char repeat = 'y';
 
 	while (repeat == 'y' || repeat == 'Y') {
 		int num; // not initizialized to save the space
 		int count = 0; // of how many numbers the user enters
-		int sum = 0; // leave at cero since no numbers have
+		int sum = 0; // leave at cero since no numbers exist yet
 		int smallest_value = numeric_limits<int>::max();
 		int biggest_value = numeric_limits<int>::min();
 		bool first_input = true;
@@ -32,7 +32,7 @@ int main()
 				cout << "Enter another integer (enter 0 if you want to stop there): ";
 			}
 
-			// Input validation
+			// Input validation to see if its an int and also if its in the arange from 0 to 10 
 			if (!(cin >> num) || num < 0 || num > 10) {
 				cout << "Invalid input. Please enter an integer between 0 and 10." << '\n';
 				cin.clear();
