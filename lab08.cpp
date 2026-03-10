@@ -8,7 +8,7 @@
 #include <limits>
 
 using namespace std;
-
+//This is a program that will process a sequence of integer values in the range of 1 through 10 read from the standard input device
 int main()
 
 {
